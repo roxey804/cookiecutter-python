@@ -4,6 +4,24 @@ language: {{cookiecutter.language}}
 
 dist: {{cookiecutter.travis_os}}
 
+{% if cookiecutter.mysql_required == 'y' or cookiecutter.docker_required == 'y' %}
+services:
+{% if cookiecutter.docker_required == 'y' %}  - docker {% endif %}
+{% if cookiecutter.mysql_required == 'y' %}  - mysql {% endif %}
+{% endif %}
+
+{% if cookiecutter.mysql_required == 'y' %}
+before_install:
+  - mysql_upgrade -u root --force
+  - sudo service mysql restart
+  - sudo chown travis /var/log
+
+addons:
+  apt:
+    packages:
+      - mysql-server
+{% endif %}
+
 # command to install dependencies
 install:
   - make all

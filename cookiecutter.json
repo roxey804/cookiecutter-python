@@ -4,7 +4,7 @@
   "github_username": "my_username",
   "project_name": "project_name",
   "description": "Short description of repository",
-  "create_reqs": "n",
+  "create_requirements": "y/n",
   "version": "0.0.1",
   "language": "python",
   "language_version": "3.9",

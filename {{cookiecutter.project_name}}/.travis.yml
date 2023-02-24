@@ -4,7 +4,7 @@ language: {{cookiecutter.language}}
 
 dist: {{cookiecutter.travis_os}}
 
-{{%- if cookiecutter.mysql_required == 'y' or cookiecutter.docker_required == 'y -%}}
+{{%- if cookiecutter.mysql_required == 'y' or cookiecutter.docker_required == 'y' -%}}
 services:
 {{%- if cookiecutter.mysql_required == 'y' -%}}
   - mysql

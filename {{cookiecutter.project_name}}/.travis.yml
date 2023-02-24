@@ -6,13 +6,12 @@ dist: {{cookiecutter.travis_os}}
 
 {% if cookiecutter.mysql_required == 'y' or cookiecutter.docker_required == 'y' %}
 services:
-{% if cookiecutter.mysql_required == 'y' %} - mysql {% endif %}
 {% if cookiecutter.docker_required == 'y' %}  - docker {% endif %}
+{% if cookiecutter.mysql_required == 'y' %}  - mysql {% endif %}
 {% endif %}
 
 {% if cookiecutter.mysql_required == 'y' %}
-_setup_before_install: &_setup_before_install
-  before_install:
+before_install:
   - mysql_upgrade -u root --force
   - sudo service mysql restart
   - sudo chown travis /var/log

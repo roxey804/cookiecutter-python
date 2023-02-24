@@ -1,0 +1,11 @@
+{
+  "name": "{{cookiecutter.project_name}}",
+  "version": "{{cookiecutter.version}}",
+  "description": "{{cookiecutter.description}}",
+  "author": "{{cookiecutter.developer_name",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pelucid/{{cookiecutter.project_name}}.git"
+  }
+  {% if cookiecutter.language== 'node_js' %}package.json{% endif %}

@@ -5,7 +5,7 @@
   "project_name": "project_name",
   "description": "Short description of repository",
   "version": "0.0.1",
-  "language": ["Python", "Node.js"],
+  "language": ["python", "node.js"],
   "language_version": "3.9",
   "generate_requirements_or_package.json": "y/n",
   "docker_required": "y/n",

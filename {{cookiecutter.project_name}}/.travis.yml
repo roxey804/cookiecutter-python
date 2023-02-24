@@ -4,17 +4,17 @@ language: {{cookiecutter.language}}
 
 dist: {{cookiecutter.travis_os}}
 
-{{%- if cookiecutter.mysql_required == 'y' or cookiecutter.docker_required == 'y' -%}}
+{{% if cookiecutter.mysql_required == 'y' or cookiecutter.docker_required == 'y' %}}
 services:
-{{%- if cookiecutter.mysql_required == 'y' -%}}
+{{% if cookiecutter.mysql_required == 'y' %}}
   - mysql
 {% endif %}
-{{%- if cookiecutter.docker_required == 'y' -%}}
+{{% if cookiecutter.docker_required == 'y' %}}
   - docker
 {% endif %}
 {% endif %}
 
-{{%- if cookiecutter.mysql_required == 'y' -%}}
+{{% if cookiecutter.mysql_required == 'y' %}}
 _setup_before_install: &_setup_before_install
   before_install:
   - mysql_upgrade -u root --force

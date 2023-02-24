@@ -3,7 +3,7 @@ import os
 language = '{{cookiecutter.language}}'
 python_files = [
     'setup.py',
-    os.path.join('../{{cookiecutter.project_name}}', 'tests', 'conftest.py')
+    os.path.join('tests', 'conftest.py')
 
 ]
 node_js_files = [

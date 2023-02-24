@@ -6,7 +6,7 @@ requirements = [
 ]
 
 setup(
-    name="{{cookiecutter.project_name}}",
+    name='{{cookiecutter.project_name}}',
     version='{{cookiecutter.version}}',
     packages=find_packages(),
     description='{{cookiecutter.description}}',

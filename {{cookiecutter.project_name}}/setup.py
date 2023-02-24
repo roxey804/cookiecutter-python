@@ -6,7 +6,7 @@ requirements = [
 ]
 
 setup(
-    name='{{project_name}}',
+    name="{{project_name}}",
     version='{{version}}',
     packages=find_packages(),
     description='{{description}}',

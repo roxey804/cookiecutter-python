@@ -1,12 +1,15 @@
 import os
 
+
 language = '{{cookiecutter.language}}'
+generate_reqs = {{cookiecutter.generate_requirements}}
 python_files = [
     'setup.py',
-    '{% if cookiecutter.generate_requirements != "y" %} requirements.txt {% endif %}',
+    if generate_reqs:
+        open("requirements.txt", 'a').close()
     os.path.join('tests', 'conftest.py')
-
 ]
+
 node_js_files = [
     'package.json'
 ]

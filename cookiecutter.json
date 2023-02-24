@@ -5,7 +5,11 @@
   "project_name": "project_name",
   "description": "Short description of repository",
   "version": "0.0.1",
-  "language": "python",
+  "language": ["python", "node_js"],
   "language_version": "3.9",
+  "generate_requirements_or_package.json": "y/n",
+  "docker_required": "y/n",
+  "mysql_required": "y/n",
   "travis_os": "bionic"
 }
+

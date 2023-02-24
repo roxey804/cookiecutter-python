@@ -5,14 +5,18 @@ language = '{{cookiecutter.language}}'
 generate_reqs = {{cookiecutter.generate_requirements}}
 python_files = [
     'setup.py',
-    if generate_reqs:
-        open("requirements.txt", 'a').close()
+    create_reqs(),
     os.path.join('tests', 'conftest.py')
 ]
 
 node_js_files = [
     'package.json'
 ]
+
+def create_reqs():
+    if generate_reqs == "y":
+        file = open("requirements.txt", 'a').close()
+    return file
 
 # Remove files if not using python
 if language != "python":

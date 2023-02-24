@@ -1,13 +1,14 @@
 import os
 import shutil
 
+# Perhaps a more advanced python script here  - This isn't currently being used
 
-create_requirements = bool("{{ cookiecutter.create_requirements }}")
+create_requirements = bool("{{ cookiecutter.action }}")
 
-if create_requirements:
+if action:
     os.makedirs(
         os.path.join(
             os.getcwd(),
-            "requirementss.txt",
+            "new_file.txt",
         )
     )

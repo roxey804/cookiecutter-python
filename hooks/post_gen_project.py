@@ -5,7 +5,7 @@ language = '{{cookiecutter.language}}'
 generate_reqs = {{cookiecutter.generate_requirements}}
 python_files = [
     'setup.py',
-    create_reqs(),
+    create_reqs(generate_reqs),
     os.path.join('tests', 'conftest.py')
 ]
 
@@ -13,7 +13,7 @@ node_js_files = [
     'package.json'
 ]
 
-def create_reqs():
+def create_reqs(generate_reqs):
     if generate_reqs == "y":
         file = open("requirements.txt", 'a').close()
     return file

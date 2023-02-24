@@ -3,6 +3,7 @@ import os
 language = '{{cookiecutter.language}}'
 python_files = [
     'setup.py',
+    '{% if cookiecutter.generate_requirements != "y" %} requirements.txt {% endif %}',
     os.path.join('tests', 'conftest.py')
 
 ]

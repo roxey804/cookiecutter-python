@@ -6,11 +6,11 @@ requirements = [
 ]
 
 setup(
-    name="{{project_name}}",
-    version='{{version}}',
+    name="{{cookiecutter.project_name}}",
+    version='{{cookiecutter.version}}',
     packages=find_packages(),
-    description='{{description}}',
-    url='https://github.com/pelucid/{{project_name}}',
+    description='{{cookiecutter.description}}',
+    url='https://github.com/pelucid/{{cookiecutter.project_name}}',
     install_requires=requirements, # or can list packages directly here
     setup_requires=['pytest-runner'],
     tests_require=['pytest', 'pytest-cov',],

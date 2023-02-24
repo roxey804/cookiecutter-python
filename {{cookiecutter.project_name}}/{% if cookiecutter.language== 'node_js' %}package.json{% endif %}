@@ -8,3 +8,4 @@
     "type": "git",
     "url": "https://github.com/pelucid/{{cookiecutter.project_name}}.git"
   }
+

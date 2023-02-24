@@ -2,7 +2,7 @@ import os
 
 language = '{{cookiecutter.language}}'
 python_files = [
-    os.path.join('../{{cookiecutter.project_name}}', 'setup.py'),
+    'setup.py',
     os.path.join('../{{cookiecutter.project_name}}', 'tests', 'conftest.py')
 
 ]

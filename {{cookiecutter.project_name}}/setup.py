@@ -14,5 +14,5 @@ setup(
 
     # entry_points={},
     
-    classifiers= ['Programming Language :: Python :: 3.9']
+    classifiers= ['Programming Language :: Python :: {{cookiecutter.language_version}}']
 )

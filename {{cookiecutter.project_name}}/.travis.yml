@@ -1,8 +1,8 @@
-language: python
-python:
+language: {{cookiecutter.language}}
+{{cookiecutter.language}}:
   - {{cookiecutter.language_version}}
 
-dist: bionic
+dist: {{cookiecutter.travis_os}}
 
 # command to install dependencies
 install:

@@ -13,7 +13,7 @@ setup(
     url='https://github.com/pelucid/{{project_name}}',
     install_requires=requirements, # or can list packages directly here
     setup_requires=['pytest-runner'],
-    tests_require=['pytest~=6.2.1', 'pytest-cov',],
+    tests_require=['pytest', 'pytest-cov',],
 
     entry_points={
         'console_scripts': [

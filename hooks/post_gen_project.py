@@ -7,6 +7,7 @@ python_files = [
 
 ]
 node_js_files = [
+    'package.json'
 ]
 
 # Remove files if not using python

@@ -4,5 +4,7 @@
   "github_username": "my_username",
   "project_name": "python_project_name",
   "description": "Short description of repository",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "language": "python",
+  "language_version": "3.9"
 }

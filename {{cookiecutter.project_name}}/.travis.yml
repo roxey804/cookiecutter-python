@@ -1,1 +1,27 @@
+language: python
+python:
+  - {{cookiecutter.language_version}}
 
+dist: bionic
+
+# command to install dependencies
+install:
+  - make all
+
+
+# command to run tests
+script:
+  - make test
+
+env: GI_ENV=TEST PYTHONPATH=$TRAVIS_BUILD_DIR/..:$PYTHONPATH BOTO_CONFIG=/tmp/nowhere
+
+# email notifications
+notifications:
+  email:
+    recipients:
+      - developers@growthintel.com
+    on_success: never
+    on_failure: change
+  slack:
+    rooms:
+      secure: "NFdQvvDDrmGui3VXomrizePU7j/BqwHgait84clMQQCelgpW9nU+RuhqZQWmqxP7WIjFgBtGI6+ZyM6nqfdww/qqmCTUD+YLQbWlT/+I4ordZPDmdH+CWPsfBP6Xy7jZLyDzkLmay/vVInjNo12B29Kpi0lCJb9ctVjO2/R3JXSylfd4to+LDTYakqIw4i5NPISGQq5Y6zroiV6jiYxy0aw1UKiE1hksZ6/zJTtyCGg3f6revekDCXEya9e44LrKd1VO0oH4NAYsyU+xFVDqHQI9FLIOmAG3ZlfYKr8crX31mp76Um4hMlpEr2zUil7WsCMljWTiOSVcUWTr53OXBD4S+rnaTth5kbazQcwjOWtccuE0cq89nroAdrIM0f8EE2JAQEQuT5gbbewnPYmSG7yQG0WvtZp975W8fYQTe/224JG2YojGuMPRWBpmyLwnQCV6pYofBniUxihfvTmr6z4LWjeAeCo4RLJDcm/ZMrrV02yEL8YtpjvPTU3/VqjjR/liBgaxURsbv5HHyU90IC3xqe5p7FT3PBNEqKi+deGVAKPJHLYbM1Bx/IhCgvoOV0FHa/YrbrzRLuFrKMEcBI21vC/snRPsWbYGJBEwn+aoV4PDgv5S7fJXBUth6dNpQ+Kgy4g1y9O/PwK76BxMTP2RaKrYvE86OynOUxbnQk4="

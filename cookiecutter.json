@@ -7,7 +7,7 @@
   "version": "0.0.1",
   "language": ["python", "node_js"],
   "language_version": "3.9",
-  "generate_requirements.txt: "y/n",
+  "generate_requirements.txt": "y/n",
   "docker_required": "y/n",
   "mysql_required": "y/n",
   "travis_os": "bionic"
